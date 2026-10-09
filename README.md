@@ -45,7 +45,3 @@ recipes use. `mode` picks which coil property the number is compared against:
 | `tier`        | coil tier                | Pyrolyse Oven, Cracking Unit   |
 
 If a category has no entry, `autoDetectKeys` is tried in order.
-
-## Building
-
-See [BUILDING.md](BUILDING.md).
