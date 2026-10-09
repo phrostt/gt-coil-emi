@@ -1,0 +1,7 @@
+{
+    "gtcoilemi.tooltip.requires": "Requires %s or better",
+    "gtcoilemi.tooltip.temperature": "Recipe temperature: %s K",
+    "gtcoilemi.tooltip.level": "Required coil level: %s",
+    "gtcoilemi.tooltip.tier": "Required coil tier: %s",
+    "gtcoilemi.tooltip.research": "Requires research"
+}
