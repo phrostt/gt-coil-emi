@@ -1,20 +1,15 @@
 modLoader="javafml"
 loaderVersion="[47,)"
 license="MIT"
-issueTrackerURL="https://example.invalid/issues"
+issueTrackerURL="https://github.com/phrostt/gt-coil-emi/issues"
 
 [[mods]]
 modId="gtcoilemi"
 version="0.1.0"
 displayName="GT Coil Info for EMI"
-authors="kuzel"
+authors="Phrost"
 description='''
-Shows which GregTech heating coil a recipe requires, drawn directly onto
-GregTech's EMI recipe pages. Works with custom multiblocks and custom coils
-added through KubeJS: the coil list is read from the block registry and the
-recipe requirement is read from the recipe's own data tag.
-
-Client side only. Requires EMI and GregTech CEu Modern.
+A client-side Minecraft Forge 1.20.1 mod that shows which GregTech heating coil a recipe needs, and whether it's gated behind research, drawn directly onto GregTech's own EMI recipe pages.
 '''
 
 [[dependencies.gtcoilemi]]
