@@ -63,4 +63,4 @@ natively).
 
 ## Building
 
-See [BUILDING.md](BUILDING.md).
+Run `./gradlew build` (JDK 17 required). The jar lands in `build/libs/`.
