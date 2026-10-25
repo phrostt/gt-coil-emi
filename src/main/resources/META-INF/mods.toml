@@ -5,11 +5,11 @@ issueTrackerURL="https://github.com/phrostt/gt-coil-emi/issues"
 
 [[mods]]
 modId="gtcoilemi"
-version="0.1.0"
-displayName="GT Coil Info for EMI"
+version="0.2.0"
+displayName="GT Coil Info"
 authors="Phrost"
 description='''
-A client-side Minecraft Forge 1.20.1 mod that shows which GregTech heating coil a recipe needs, and whether it's gated behind research, drawn directly onto GregTech's own EMI recipe pages.
+A client-side Minecraft Forge 1.20.1 mod that shows which GregTech heating coil a recipe needs, and whether it's gated behind research, drawn directly onto GregTech's own EMI or JEI recipe pages.
 '''
 
 [[dependencies.gtcoilemi]]
@@ -28,7 +28,7 @@ A client-side Minecraft Forge 1.20.1 mod that shows which GregTech heating coil 
 
 [[dependencies.gtcoilemi]]
     modId="emi"
-    mandatory=true
+    mandatory=false
     versionRange="[1.1,)"
     ordering="AFTER"
     side="CLIENT"
@@ -37,5 +37,12 @@ A client-side Minecraft Forge 1.20.1 mod that shows which GregTech heating coil 
     modId="gtceu"
     mandatory=false
     versionRange="*"
+    ordering="AFTER"
+    side="CLIENT"
+
+[[dependencies.gtcoilemi]]
+    modId="jei"
+    mandatory=false
+    versionRange="[15,)"
     ordering="AFTER"
     side="CLIENT"

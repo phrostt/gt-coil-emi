@@ -60,6 +60,23 @@ public final class CoilIndex {
         return lowestMatching(tier, Coil::tier);
     }
 
+    /** Every coil that satisfies the requirement, weakest first; used to cycle the icon. */
+    public static List<Coil> allMatching(String mode, int required) {
+        ToIntFunction<Coil> property = switch (mode) {
+            case "level" -> Coil::level;
+            case "tier" -> Coil::tier;
+            default -> Coil::temperature;
+        };
+        List<Coil> out = new ArrayList<>();
+        for (Coil coil : all()) {
+            if (property.applyAsInt(coil) >= required) {
+                out.add(coil);
+            }
+        }
+        out.sort(java.util.Comparator.comparingInt(property));
+        return out;
+    }
+
     private static Coil lowestMatching(int required, ToIntFunction<Coil> property) {
         Coil best = null;
         for (Coil coil : all()) {

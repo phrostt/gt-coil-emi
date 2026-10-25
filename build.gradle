@@ -79,6 +79,14 @@ repositories {
         name = 'Sleeping Town'
         url = 'https://repo.sleeping.town'
     }
+    maven {
+        name = 'Jared'
+        url = 'https://maven.blamejared.com/'
+    }
+    maven {
+        name = 'ModMaven'
+        url = 'https://modmaven.dev'
+    }
 }
 
 dependencies {
@@ -87,6 +95,11 @@ dependencies {
     // EMI: compile against the mojmap api jar, run against the Forge build.
     compileOnly fg.deobf("dev.emi:emi-xplat-mojmap:${emi_version}:api")
     runtimeOnly fg.deobf("dev.emi:emi-forge:${emi_version}")
+
+    // JEI: compile against the api jars only. JEI and EMI are both optional at
+    // runtime; the JEI plugin only registers when EMI is absent.
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
 
     // Generates gtcoilemi.refmap.json from the @Mixin annotations at compile time.
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

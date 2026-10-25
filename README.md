@@ -25,6 +25,26 @@ Assembly Line's own UI. This mod fills both gaps.
 * GregTech is accessed purely by reflection, so the build has no GregTech,
   LDLib or Registrate dependency.
 
+## JEI
+
+If the pack runs JEI instead of EMI, the same coil and research info is drawn by a
+JEI category decorator. It is registered only when EMI is not loaded (with both
+installed EMI owns the recipe screen). GregTech's recipe type ids are discovered by
+reflection; if one is missed, list it under `jeiRecipeTypes` in the config.
+`jeiEnabled` turns the JEI side off.
+
+## Blood Magic meteor tab
+
+Adds a "Blood Magic Meteor" recipe tab to EMI (or JEI when EMI is absent) for every
+`bloodmagic:meteor` recipe, the ones behind the Mark of the Falling Tower ritual:
+the ritual name, the catalyst item, the blood (LP) the meteor costs, the ritual's
+activation cost, the explosion and meteor radius, and every layer with its radius and the
+blocks it can contain (fill, weighted extras with their chance, outer shell; tags cycle
+through their blocks). Blood Magic's own JEI integration does not
+list these. Turn it off with `meteorTab`; `meteorActivationCost` sets the activation
+figure shown (250,000 LP by default). If another meteor EMI addon is installed you
+will see two tabs, so disable one.
+
 ## Configuration
 
 `config/gtcoilemi.json` is written on first launch.

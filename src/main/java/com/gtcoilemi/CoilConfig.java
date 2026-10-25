@@ -70,11 +70,29 @@ public class CoilConfig {
      */
     public Set<String> researchExcludedCategories = new LinkedHashSet<>(List.of("gtceu:assembly_line"));
 
+    /** Draw the same info in JEI when EMI is not installed. */
+    public boolean jeiEnabled = true;
+
+    /** Extra GregTech recipe type ids to decorate in JEI, if auto-discovery misses any. */
+    public List<String> jeiRecipeTypes = new ArrayList<>();
+
+    /** Add a Blood Magic meteor tab (ritual name, catalyst, blood cost) to EMI or JEI. */
+    public boolean meteorTab = true;
+
+    /** Add a tab listing every Blood Magic ritual (costs, crystal tier, rune layout) to EMI or JEI. */
+    public boolean ritualTab = true;
+
+    /** Activation cost of the Mark of the Falling Tower ritual, shown on the meteor tab (Blood Magic default 250,000 LP). */
+    public int meteorActivationCost = 250000;
+
     /** Nudge the drawn slot if it collides with a category's own widgets. */
     public int offsetX = 0;
     public int offsetY = 0;
     
     /** Draw the requirement as plain text on the recipe page too, not just in a tooltip. */
+    /** Shift + left click a recipe output item in JEI to copy the recipe id (for pack development). */
+    public boolean copyRecipeId = true;
+
     public boolean showText = true;
 
     /** Where the text block starts, relative to the recipe widget's top-left corner. */
